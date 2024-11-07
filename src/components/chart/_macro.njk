@@ -1,0 +1,17 @@
+{%- macro onsChart(params, uid = 12345) -%}
+    <div id="chart-{{- uid -}}" class="ons-chart"></div>
+
+    <link rel="stylesheet" href="https://unpkg.com/@onsvisual/svelte-charts@latest/dist/apps/Chart.css"/>
+    <script src="https://unpkg.com/@onsvisual/svelte-charts@latest/dist/apps/Chart.js"></script>
+
+    <script>
+        new Chart({
+            target: document.getElementById('chart-{{- uid -}}'),
+            props: {
+                type: "{{- params.type -}}",
+                data: {{- params.data | dump | safe -}},
+                options: {{- params.options | dump | safe -}}
+            }
+        });
+    </script>
+{%- endmacro -%}

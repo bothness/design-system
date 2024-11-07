@@ -1,0 +1,18 @@
+{% from "components/chart/_macro.njk" import onsChart %}
+{{
+    onsChart({
+        "type": "bar",
+        "data": [
+            { "year": 2017, "value": 320 },
+            { "year": 2018, "value": 640 },
+            { "year": 2019, "value": 1600 },
+            { "year": 2020, "value": 3840 }
+        ],
+        "options": {
+            "xKey": "value",
+            "yKey": "year",
+            "title": "Bar chart example",
+            "footer": "Source: ONS."
+        }
+    })
+}}

@@ -1,0 +1,11 @@
+.ons-chart {
+    margin: 0;
+    display: block;
+
+    &__bar {
+        min-height: 30px;
+        min-width: 30px;
+        margin-bottom: 2px;
+    }
+}
+
