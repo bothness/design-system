@@ -1,4 +1,7 @@
-{%- macro onsChart(params, uid = 12345) -%}
+{%- macro onsChart(params) -%}
+    {% set dig = range(0, 9) %}
+    {% set uid = (dig | random | string) + (dig | random | string) + (dig | random | string) + (dig | random | string) %}
+
     <div id="chart-{{- uid -}}" class="ons-chart"></div>
 
     <link rel="stylesheet" href="https://unpkg.com/@onsvisual/svelte-charts@latest/dist/apps/Chart.css"/>
