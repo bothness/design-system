@@ -1,7 +1,7 @@
 {% from "components/chart/_macro.njk" import onsChart %}
 {{
     onsChart({
-        "type": "line-highlight",
+        "type": "line",
         "data": [
             {z: "West Oxfordshire", x: "2002", y: 95961},
             {z: "West Oxfordshire", x: "2003", y: 97083},
@@ -65,10 +65,11 @@
             "xKey": "x",
             "yKey": "y",
             "zKey": "z",
-            "selected": "Winchester",
             "padding-top": 20,
             "padding-right": 120,
             "padding-left": 80,
+            "labels": "all",
+            "legend": false,
             "title": "Largest local authorities in the South East, 2002-2020",
             "footer": "Source: Office for National Statistics"
         }
